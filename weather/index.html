@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard - Pronóstico del Tiempo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-cloud-sun"></i>
+                <span>Weather Dashboard</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Inicio</a></li>
+                <li><a href="#" class="nav-link">Pronóstico</a></li>
+                <li><a href="#" class="nav-link">Ciudades Guardadas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Pronóstico del Tiempo en Tiempo Real</h1>
+            <p>Obtén información meteorológica precisa de cualquier ciudad del mundo</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar ciudad..." class="search-input">
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="geoBtn" class="geo-btn" title="Ubicación actual">
+                    <i class="fas fa-location-dot"></i>
+                </button>
+            </div>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Current Weather Card -->
+        <section id="currentWeather" class="current-weather-section" style="display: none;">
+            <div class="current-weather-card">
+                <div class="weather-header">
+                    <div class="location-info">
+                        <h2 id="cityName">Ciudad</h2>
+                        <p id="weatherDate"></p>
+                    </div>
+                    <button id="saveBtn" class="save-btn" title="Guardar ciudad">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="weather-main">
+                    <div class="temp-display">
+                        <span id="temperature" class="temperature">--°</span>
+                        <div class="weather-description">
+                            <img id="weatherIcon" src="" alt="Weather icon" class="weather-icon-large">
+                            <p id="weatherDesc"></p>
+                        </div>
+                    </div>
+                    <div class="weather-details-grid">
+                        <div class="detail-card">
+                            <i class="fas fa-droplet"></i>
+                            <span>Humedad</span>
+                            <strong id="humidity">--</strong>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-wind"></i>
+                            <span>Viento</span>
+                            <strong id="windSpeed">--</strong>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-gauge"></i>
+                            <span>Presión</span>
+                            <strong id="pressure">--</strong>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-eye"></i>
+                            <span>Visibilidad</span>
+                            <strong id="visibility">--</strong>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-sun"></i>
+                            <span>Sensación</span>
+                            <strong id="feelsLike">--</strong>
+                        </div>
+                        <div class="detail-card">
+                            <i class="fas fa-arrows-up-down"></i>
+                            <span>Mín/Máx</span>
+                            <strong id="minMax">--</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="air-quality">
+                    <h3>Calidad del Aire</h3>
+                    <div id="aqiContainer" class="aqi-container">
+                        <div class="aqi-bar">
+                            <div id="aqiBar" class="aqi-level" style="width: 0%"></div>
+                        </div>
+                        <p id="aqiText">Cargando...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hourly Forecast -->
+        <section id="hourlySection" class="hourly-section" style="display: none;">
+            <h2 class="section-title">Pronóstico por Horas</h2>
+            <div id="hourlyForecast" class="hourly-forecast"></div>
+        </section>
+
+        <!-- Daily Forecast -->
+        <section id="dailySection" class="daily-section" style="display: none;">
+            <h2 class="section-title">Pronóstico de 5 Días</h2>
+            <div id="dailyForecast" class="daily-forecast"></div>
+        </section>
+
+        <!-- Saved Cities -->
+        <section id="savedCities" class="saved-cities-section" style="display: none;">
+            <h2 class="section-title">Ciudades Guardadas</h2>
+            <div id="savedCitiesList" class="saved-cities-grid"></div>
+        </section>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Cargando datos meteorológicos...</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Weather Dashboard. Powered by OpenWeatherMap API</p>
+            <p><small>Datos en tiempo real de fuentes meteorológicas confiables</small></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
