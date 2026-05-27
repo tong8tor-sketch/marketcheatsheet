@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Cheat Sheet - Instrumentos de Inversión</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>Market Cheat Sheet</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#instrumentos" class="nav-link">Instrumentos</a></li>
+                <li><a href="#acerca" class="nav-link">Acerca de</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Instrumentos de Inversión</h1>
+            <p>Guía completa de opciones de inversión en el mercado argentino</p>
+            <a href="#instrumentos" class="cta-button">Explorar</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="instrumentos" class="instruments-section">
+            <h2 class="section-title">Tipos de Instrumentos</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="renta-fija">Renta Fija</button>
+                <button class="filter-btn" data-filter="renta-variable">Renta Variable</button>
+                <button class="filter-btn" data-filter="otro">Otros</button>
+            </div>
+
+            <div class="instruments-grid">
+                <!-- Dólar -->
+                <div class="instrument-card" data-category="otro">
+                    <div class="card-header otro">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Dólar</h3>
+                    <p class="category-badge">Moneda Extranjera</p>
+                    <div class="card-content">
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Moneda de referencia global</li>
+                            <li>Protección contra devaluación</li>
+                            <li>Alta liquidez</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="risk-level">Riesgo: Bajo</span>
+                    </div>
+                </div>
+
+                <!-- Acciones -->
+                <div class="instrument-card" data-category="renta-variable">
+                    <div class="card-header renta-variable">
+                        <i class="fas fa-arrow-up"></i>
+                    </div>
+                    <h3>Acciones</h3>
+                    <p class="category-badge">Renta Variable</p>
+                    <div class="card-content">
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Participación accionaria empresarial</li>
+                            <li>Potencial de crecimiento alto</li>
+                            <li>Volatilidad variable</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="risk-level">Riesgo: Alto</span>
+                    </div>
+                </div>
+
+                <!-- Bonos -->
+                <div class="instrument-card" data-category="renta-fija">
+                    <div class="card-header renta-fija">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Bonos</h3>
+                    <p class="category-badge">Renta Fija</p>
+                    <div class="card-content">
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Títulos de deuda del estado</li>
+                            <li>Ingresos predecibles</li>
+                            <li>Plazo definido</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="risk-level">Riesgo: Medio</span>
+                    </div>
+                </div>
+
+                <!-- CEDEARs -->
+                <div class="instrument-card" data-category="renta-variable">
+                    <div class="card-header renta-variable">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>CEDEARs</h3>
+                    <p class="category-badge">Acciones Internacionales</p>
+                    <div class="card-content">
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Acciones extranjeras en pesos</li>
+                            <li>Exposición internacional</li>
+                            <li>Diversificación geográfica</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="risk-level">Riesgo: Alto</span>
+                    </div>
+                </div>
+
+                <!-- Letras -->
+                <div class="instrument-card" data-category="renta-fija">
+                    <div class="card-header renta-fija">
+                        <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <h3>Letras</h3>
+                    <p class="category-badge">Renta Fija</p>
+                    <div class="card-content">
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Títulos de corto plazo</li>
+                            <li>Bajo riesgo de crédito</li>
+                            <li>Vencimiento próximo</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="risk-level">Riesgo: Bajo-Medio</span>
+                    </div>
+                </div>
+
+                <!-- Obligaciones Negociables -->
+                <div class="instrument-card" data-category="renta-fija">
+                    <div class="card-header renta-fija">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Obligaciones Negociables</h3>
+                    <p class="category-badge">Renta Fija</p>
+                    <div class="card-content">
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Deuda corporativa negociable</li>
+                            <li>Rentabilidad variable según emisor</li>
+                            <li>Plazo flexible</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="risk-level">Riesgo: Medio</span>
+                    </div>
+                </div>
+
+                <!-- Fondos Comunes de Inversión -->
+                <div class="instrument-card" data-category="otro">
+                    <div class="card-header otro">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Fondos Comunes de Inversión</h3>
+                    <p class="category-badge">Vehículo de Inversión</p>
+                    <div class="card-content">
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Cartera diversificada gestionada</li>
+                            <li>Acceso a profesionales</li>
+                            <li>Inversión mínima accesible</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="risk-level">Riesgo: Variable</span>
+                    </div>
+                </div>
+
+                <!-- Cauciones -->
+                <div class="instrument-card" data-category="renta-fija">
+                    <div class="card-header renta-fija">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Cauciones</h3>
+                    <p class="category-badge">Renta Fija</p>
+                    <div class="card-content">
+                        <p><strong>Características:</strong></p>
+                        <ul>
+                            <li>Préstamos de valores garantizados</li>
+                            <li>Plazo muy corto</li>
+                            <li>Rendimientos atractivos</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <span class="risk-level">Riesgo: Bajo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section id="acerca" class="info-section">
+            <h2 class="section-title">Información Importante</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Diversificación</h3>
+                    <p>Distribuir inversiones entre diferentes instrumentos para reducir riesgos y optimizar rentabilidad.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Riesgo vs Rentabilidad</h3>
+                    <p>Mayor riesgo generalmente implica mayor potencial de rentabilidad. Elige según tu perfil.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Horizonte Temporal</h3>
+                    <p>Considera tus objetivos: corto, medio o largo plazo para elegir instrumentos adecuados.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Asesoramiento Profesional</h3>
+                    <p>Consulta con expertos antes de invertir. Este sitio es informativo, no constituye recomendación.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Market Cheat Sheet. Todos los derechos reservados.</p>
+            <p><small>Disclaimer: Esta información es solo educativa. No constituye asesoramiento financiero.</small></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
